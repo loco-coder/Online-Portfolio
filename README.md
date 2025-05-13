@@ -3,7 +3,8 @@
 Welcome to my engineering portfolio!  
 This site showcases a selection of my work in mechanical design, sustainability, and real-time media technology.
 
-🌐 **Live Portfolio**: [loco-coder.github.io/portfolio](https://loco-coder.github.io/Online-Portfolio/) 
+🌐 **Live Portfolio**: [loco-coder.github.io/portfolio](https://loco-coder.github.io/Online-Portfolio/)
+
 📧 **Email**: rodriguezjonathan467@gmail.com  
 📞 **Phone**: (902) 978-0118  
 🔗 **LinkedIn**: [linkedin.com/in/jonathan-rodriguez-del-aguila](https://www.linkedin.com/in/jonathan-rodriguez-del-aguila)  
