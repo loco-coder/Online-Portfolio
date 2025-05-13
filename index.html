@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan Rodriguez | Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.1/dist/frappe-gantt.css">
+</head>
+<body>
+  <main style="padding: 2rem; max-width: 1000px; margin: auto;">
+    <h1 style="color: #ffb347; font-family: Arial, sans-serif;">Jonathan Rodriguez – Engineer-in-Training</h1>
+    <section>
+      <h2 style="color: #ffb347;">About Me</h2>
+      <p>Engineer-in-Training based in Ottawa. Specializing in SolidWorks, Blender, and data-driven design with FreeCAD, TouchDesigner, and Python. Focused on sustainability, visual storytelling, and hands-on engineering.</p>
+    </section>
+
+    <h2 style="color: #ffb347;">Highlighted Projects</h2>
+
+    <div class="project" id="project-abpi">
+      <h3 style="color: #ffb347;">📦 Atlantic Beef Products – Box Forming Line</h3>
+      <p>Led the full CAD design of a second-storey packaging mezzanine at ABPI to integrate a Wexxar WF20 case erector. Conducted ROI analysis based on labor reduction, box cost savings, and automation efficiency. Final layout met NBC/NFC code and was approved for real-world implementation. Delivered construction drawings and presentation package for stakeholders.</p>
+      <button class="gantt-toggle" data-target="gantt-abpi">📅 Show Timeline</button>
+      <div id="gantt-abpi" class="gantt-container" style="display:none;"><svg></svg></div>
+    </div>
+
+    <div class="project" id="project-cavendish">
+      <h3 style="color: #ffb347;">🌱 Cavendish Farms – Bio-Solids Pelletization</h3>
+      <p>Engineered a sustainable solution to convert potato digestate into high-energy pellets and nutrient-rich fertilizer. Conducted drying curve experiments, CHNS/O analysis, calorimetry, and pellet strength tests. Designed a custom die press prototype and optimized processing conditions for commercial application. Final report delivered to Cavendish Farms management with actionable data and equipment recommendations.</p>
+      <button class="gantt-toggle" data-target="gantt-cavendish">📅 Show Timeline</button>
+      <div id="gantt-cavendish" class="gantt-container" style="display:none;"><svg></svg></div>
+    </div>
+
+    <div class="project" id="project-touch">
+      <h3 style="color: #ffb347;">🎛️ TouchDesigner Visuals – Takeover DJ Set</h3>
+      <p>Designed and coded real-time visuals for a 4-hour electronic music performance. Used Hydra with TouchDesigner to create audio-reactive shaders, kaleidoscopic transitions, and synced lighting effects. Combined live audio data and visual loops to match BPM and genre shifts across house, dubstep, and disco groove. Delivered a seamless VJ experience tailored to the live DJ environment.</p>
+    </div>
+
+    <div class="project" id="project-3d">
+      <h3 style="color: #ffb347;">🚀 Interactive 3D Experience</h3>
+      <p>Placeholder for a future 3D viewer experience featuring SolidWorks-exported models. Current demo includes an interactive, orbit-controlled 3D placeholder. Final version will showcase converted glTF scenes and spatial project navigation similar to Bruno Simon's portfolio.</p>
+      <div id="viewer-container"></div>
+    </div>
+
+    <section>
+      <h2 style="color: #ffb347;">Contact</h2>
+      <p>Email: rodriguezjonathan467@gmail.com</p>
+      <p>Phone: (902) 978-0118</p>
+      <p>GitHub: <a href="https://github.com/loco-coder" style="color:#ffb347;">github.com/loco-coder</a></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.1/dist/frappe-gantt.min.js"></script>
+  <script>
+    const abpiTasks = [
+      { id: 'abpi-1', name: 'Client Research & Scope', start: '2021-10-01', end: '2021-10-15', progress: 100 },
+      { id: 'abpi-2', name: 'Conceptual Design + Mezzanine CAD', start: '2021-10-16', end: '2021-12-01', progress: 100 },
+      { id: 'abpi-3', name: 'Client Feedback & Layout Revisions', start: '2022-01-10', end: '2022-02-05', progress: 100 },
+      { id: 'abpi-4', name: 'Final ROI & Equipment Costing', start: '2022-02-10', end: '2022-03-01', progress: 100 },
+      { id: 'abpi-5', name: 'Final Presentation + Report Delivery', start: '2022-04-01', end: '2022-04-15', progress: 100 }
+    ];
+
+    const cavendishTasks = [
+      { id: 'cf-1', name: 'Autoclaving + Safety Testing', start: '2023-09-01', end: '2023-09-20', progress: 100 },
+      { id: 'cf-2', name: 'Moisture Tests & Drying Experiments', start: '2023-09-21', end: '2023-10-15', progress: 100 },
+      { id: 'cf-3', name: 'Pelletizing Test Setup', start: '2023-10-16', end: '2023-11-10', progress: 100 },
+      { id: 'cf-4', name: 'CHNS/O Analysis + HHV Calculation', start: '2023-11-11', end: '2023-12-01', progress: 100 },
+      { id: 'cf-5', name: 'Prototype Die Press Testing', start: '2024-01-05', end: '2024-02-10', progress: 100 },
+      { id: 'cf-6', name: 'Final Data Analysis + Presentation', start: '2024-03-01', end: '2024-03-30', progress: 100 }
+    ];
+
+    function initGantt(id, tasks) {
+      const container = document.getElementById(id);
+      container.innerHTML = '';
+      new Gantt(container, tasks, { view_mode: 'Month' });
+    }
+
+    document.querySelectorAll('.gantt-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const id = button.dataset.target;
+        const container = document.getElementById(id);
+        const isVisible = container.style.display === 'block';
+
+        document.querySelectorAll('.gantt-container').forEach(other => {
+          if (other !== container) {
+            other.style.display = 'none';
+            const otherButton = document.querySelector(`.gantt-toggle[data-target="${other.id}"]`);
+            if (otherButton) otherButton.textContent = '📅 Show Timeline';
+          }
+        });
+
+        container.style.display = isVisible ? 'none' : 'block';
+        button.textContent = isVisible ? '📅 Show Timeline' : '📅 Hide Timeline';
+
+        if (!isVisible) {
+          const tasks = id.includes('abpi') ? abpiTasks : cavendishTasks;
+          initGantt(id, tasks);
+          container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #f3f3f3;
+      font-family: Arial, sans-serif;
+    }
+    .gantt-toggle {
+      background-color: #ffb347;
+      color: #1e1e1e;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .gantt-toggle:hover {
+      background-color: #ffaa33;
+    }
+    .gantt-container {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+  </style>
+</body>
+</html>
