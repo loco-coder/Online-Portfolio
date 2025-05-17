@@ -5,184 +5,275 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jonathan Rodriguez | Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.1/dist/frappe-gantt.css">
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #f3f3f3;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      color: #ffb347;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      color: #ffb347;
+    }
+    h3, h4 {
+      color: #f3f3f3;
+    }
+    .gantt-toggle {
+      background-color: #ffb347;
+      color: #1e1e1e;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .gantt-toggle:hover {
+      background-color: #ffaa33;
+    }
+    .gantt-container {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    table {
+      width: 100%;
+      background-color: #2a2a2a;
+      color: #fff;
+      border-collapse: collapse;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    thead {
+      background-color: #ffb347;
+      color: #1e1e1e;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: left;
+    }
+    img, video, iframe {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    figure {
+      margin-bottom: 1.5rem;
+    }
+    figcaption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #ccc;
+    }
+    /* Responsive styles */
+    @media (max-width: 800px) {
+      main {
+        padding: 1rem;
+        max-width: 98vw;
+      }
+      h1, h2, h3, h4 {
+        font-size: 1.1em;
+      }
+      table,
+      .project,
+      .gantt-container,
+      iframe,
+      video {
+        width: 100% !important;
+        min-width: 0;
+        border-radius: 0;
+      }
+      img {
+        width: 100% !important;
+        height: auto;
+        border-radius: 0 !important;
+      }
+      figure {
+        margin: 0;
+      }
+      .project {
+        margin: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main style="padding: 2rem; max-width: 1000px; margin: auto;">
-    <h1 style="color: #ffb347; font-family: Arial, sans-serif;">Jonathan Rodriguez – Engineer-in-Training</h1>
+  <main>
+    <h1>Jonathan Rodriguez – Engineer-in-Training</h1>
     <section>
-      <h2 style="color: #ffb347;">About Me</h2>
-      <p>Engineer-in-Training based in Ottawa. Specializing in SolidWorks, Blender, and data-driven design with FreeCAD, TouchDesigner, and Python. Focused on sustainability, visual storytelling, and hands-on engineering.</p>
+      <h2>About Me</h2>
+      <p>Engineer-in-Training based in Ottawa. Specializing in SolidWorks, Blender, and data-driven design with FreeCAD, TouchDesigner, and Python. Focused on sustainability, visual storytelling, and innovative problem-solving.</p>
     </section>
 
-<section>
-  <h2 style="color: #ffb347;">Professional Experience</h2>
-  <h3 style="color: #f3f3f3;">Mechanical Engineer-in-Training | Ottawa, ON</h3>
-  <p><em>May 2024 – Present</em></p>
-  <ul>
-    <li>Developing mechanical systems and custom tooling for production and R&D environments</li>
-    <li>Creating parametric models and drawings using SolidWorks and FreeCAD</li>
-    <li>Collaborating across teams to optimize manufacturing processes</li>
-    <li>Documenting procedures and supporting design verification efforts</li>
-  </ul>
-</section>
+    <section>
+      <h2>Professional Experience</h2>
+      <h3>Mechanical Engineer-in-Training | Ottawa, ON</h3>
+      <p><em>May 2024 – Present</em></p>
+      <ul>
+        <li>Developing mechanical systems and custom tooling for production and R&D environments</li>
+        <li>Creating parametric models and drawings using SolidWorks and FreeCAD</li>
+        <li>Collaborating across teams to optimize manufacturing processes</li>
+        <li>Documenting procedures and supporting design verification efforts</li>
+      </ul>
+    </section>
 
-<section>
-  <h2 style="color: #ffb347;">Education</h2>
-  <h3 style="color: #f3f3f3;">Bachelor of Engineering in Sustainable Design Engineering</h3>
-  <p><em>University of Prince Edward Island – Graduated 2024</em></p>
-  <ul>
-    <li>Specialized in sustainability-focused mechanical and systems design</li>
-    <li>Completed senior capstone project converting bio-solids to energy pellets</li>
-    <li>Involved in CAD-heavy project work and environmental engineering courses</li>
-  </ul>
-</section>
+    <section>
+      <h2>Education</h2>
+      <h3>Bachelor of Engineering in Sustainable Design Engineering</h3>
+      <p><em>University of Prince Edward Island – Graduated 2024</em></p>
+      <ul>
+        <li>Specialized in sustainability-focused mechanical and systems design</li>
+        <li>Completed senior capstone project converting bio-solids to energy pellets</li>
+        <li>Involved in CAD-heavy project work and environmental engineering courses</li>
+      </ul>
+    </section>
 
-<section>
-  <h2 style="color: #ffb347;">Technical Skills</h2>
-  <ul>
-    <li><strong>CAD & Design:</strong> SolidWorks, FreeCAD, AutoCAD, Blender</li>
-    <li><strong>Programming:</strong> Python, MATLAB</li>
-    <li><strong>Visualization:</strong> TouchDesigner, Adobe Suite (basic)</li>
-    <li><strong>Simulation:</strong> ANSYS, COMSOL (introductory)</li>
-    <li><strong>Project Tools:</strong> GitHub, JIRA, Google Workspace</li>
-  </ul>
-</section>
+    <section>
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>CAD & Design:</strong> SolidWorks, FreeCAD, AutoCAD, Blender</li>
+        <li><strong>Programming:</strong> Python, MATLAB</li>
+        <li><strong>Visualization:</strong> TouchDesigner, Adobe Suite (basic)</li>
+        <li><strong>Simulation:</strong> ANSYS, COMSOL (introductory)</li>
+        <li><strong>Project Tools:</strong> GitHub, JIRA, Google Workspace</li>
+      </ul>
+    </section>
 
-    <h2 style="color: #ffb347;">Highlighted Projects</h2>
+    <h2>Highlighted Projects</h2>
 
     <div class="project" id="project-abpi">
-      <h3 style="color: #ffb347;">📦 Atlantic Beef Products – Box Forming Line</h3>
-      <p>Led the full CAD design of a second-storey packaging mezzanine at ABPI to integrate a Wexxar WF20 case erector. Conducted ROI analysis based on labor reduction, box cost savings, and automation efficiency. Final layout met NBC/NFC code and was approved for real-world implementation. Delivered construction drawings and presentation package for stakeholders.</p>
-     
-  <button class="gantt-toggle" data-target="gantt-abpi">📅 Show Project Timeline</button>
+      <h3>📦 Atlantic Beef Products – Box Forming Line</h3>
+      <p>Led the full CAD design of a second-storey packaging mezzanine at ABPI to integrate a Wexxar WF20 case erector. Conducted ROI analysis based on labor reduction, box cost savings, and automation benefits.</p>
+      <button class="gantt-toggle" data-target="gantt-abpi">📅 Show Project Timeline</button>
       <div id="gantt-abpi" class="gantt-container" style="display:none;"><svg></svg></div>
     </div>
-      
-      <h4 style="color: #ffb347; margin-top: 1.5rem;">📽 CAD Walkthrough – Project Animation</h4>
-<video controls style="margin-top: 0.5rem; width: 100%; border-radius: 8px;">
-  <source src="assets/videos/eDrawings 2025-05-17 10-57-24 compressed.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
-    
+    <h4 style="margin-top: 1.5rem;">📽️ CAD Walkthrough – Project Animation</h4>
+    <video controls>
+      <source src="assets/videos/eDrawings 2025-05-17 10-57-24 compressed.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
     <div class="project" id="project-cavendish">
-      <h3 style="color: #ffb347;">🌱 Cavendish Farms – Bio-Solids Pelletization</h3>
-      <p>Engineered a sustainable solution to convert potato digestate into high-energy pellets and nutrient-rich fertilizer. Conducted drying curve experiments, CHNS/O analysis, calorimetry, and pellet strength tests. Designed a custom die press prototype and optimized processing conditions for commercial application. Final report delivered to Cavendish Farms management with actionable data and equipment recommendations.</p>
-      <div style="margin-top: 1.5rem;">
+      <h3>🌱 Cavendish Farms – Bio-Solids Pelletization</h3>
+      <p>Engineered a sustainable solution to convert potato digestate into high-energy pellets and nutrient-rich fertilizer. Conducted drying curve experiments, CHNS/O analysis, calorimetry, and prototype pellet pressing.</p>
 
-<div style="margin-top: 1.5rem;">
-        <h4 style="color: #ffb347;">📷 Visuals & Results</h4>
-        <img src="assets/images/cavendish-drying-curve.png" alt="Drying Curve" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-        <img src="assets/images/cavendish-pellet-press.png" alt="Pellet Press Prototype" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-        <table style="width: 100%; background-color: #2a2a2a; color: #fff; border-collapse: collapse; border-radius: 6px; overflow: hidden;">
-          <thead style="background-color: #ffb347; color: #1e1e1e;">
+      <div style="margin-top: 1.5rem;">
+        <h4>📷 Visuals & Results</h4>
+        <img src="assets/images/cavendish-drying-curve.png" alt="Drying Curve">
+        <img src="assets/images/cavendish-pellet-press.png" alt="Pellet Press Prototype">
+        <table>
+          <thead>
             <tr>
-              <th style="padding: 0.5rem; text-align: left;">Test</th>
-              <th style="padding: 0.5rem; text-align: left;">Result</th>
+              <th>Test</th>
+              <th>Result</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td style="padding: 0.5rem;">Moisture Content (Initial)</td><td style="padding: 0.5rem;">68%</td></tr>
-            <tr><td style="padding: 0.5rem;">Moisture Content (Post-drying)</td><td style="padding: 0.5rem;">12%</td></tr>
-            <tr><td style="padding: 0.5rem;">HHV (Calorific Value)</td><td style="padding: 0.5rem;">18.5 MJ/kg</td></tr>
-            <tr><td style="padding: 0.5rem;">Pellet Density</td><td style="padding: 0.5rem;">1.1 g/cm³</td></tr>
+            <tr><td>Moisture Content (Initial)</td><td>68%</td></tr>
+            <tr><td>Moisture Content (Post-drying)</td><td>12%</td></tr>
+            <tr><td>HHV (Calorific Value)</td><td>18.5 MJ/kg</td></tr>
+            <tr><td>Pellet Density</td><td>1.1 g/cm³</td></tr>
           </tbody>
-        </div>
-        <div style="margin-top: 2rem;">
-  <h4 style="color: #ffb347;">📊 CHNS/O Analysis & Pellet Characteristics</h4>
-  <table style="width: 100%; background-color: #2a2a2a; color: #fff; border-collapse: collapse; border-radius: 6px; overflow: hidden; margin-bottom: 1rem;">
-    <thead style="background-color: #ffb347; color: #1e1e1e;">
-      <tr>
-        <th style="padding: 0.5rem;">Parameter</th>
-        <th style="padding: 0.5rem;">Result</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="padding: 0.5rem;">Carbon (C)</td><td style="padding: 0.5rem;">41.13%</td></tr>
-      <tr><td style="padding: 0.5rem;">Hydrogen (H)</td><td style="padding: 0.5rem;">6.23%</td></tr>
-      <tr><td style="padding: 0.5rem;">Nitrogen (N)</td><td style="padding: 0.5rem;">2.14%</td></tr>
-      <tr><td style="padding: 0.5rem;">Sulfur (S)</td><td style="padding: 0.5rem;">0.44%</td></tr>
-      <tr><td style="padding: 0.5rem;">Oxygen (O)</td><td style="padding: 0.5rem;">50.06%</td></tr>
-      <tr><td style="padding: 0.5rem;">HHV</td><td style="padding: 0.5rem;">18.5 MJ/kg</td></tr>
-      <tr><td style="padding: 0.5rem;">Bulk Density</td><td style="padding: 0.5rem;">600–700 kg/m³</td></tr>
-      <tr><td style="padding: 0.5rem;">Durability</td><td style="padding: 0.5rem;">92%</td></tr>
-    </tbody>
-  </table>
-</div>
-<div style="margin-top: 2rem;">
-  <h4 style="color: #ffb347;">💧 Moisture Content vs Pellet Quality</h4>
-  <table style="width: 100%; background-color: #2a2a2a; color: #fff; border-collapse: collapse; border-radius: 6px; overflow: hidden;">
-    <thead style="background-color: #ffb347; color: #1e1e1e;">
-      <tr>
-        <th style="padding: 0.5rem;">Moisture Content (%)</th>
-        <th style="padding: 0.5rem;">Visual Description</th>
-        <th style="padding: 0.5rem;">Pellet Quality</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="padding: 0.5rem;">40%</td><td style="padding: 0.5rem;">Clumpy, steam-released mash</td><td style="padding: 0.5rem;">Unusable</td></tr>
-      <tr><td style="padding: 0.5rem;">35%</td><td style="padding: 0.5rem;">Sticky, poor compression</td><td style="padding: 0.5rem;">Poor</td></tr>
-      <tr><td style="padding: 0.5rem;">30%</td><td style="padding: 0.5rem;">Smooth surface, clean ejection</td><td style="padding: 0.5rem;">Good</td></tr>
-      <tr><td style="padding: 0.5rem;">25%</td><td style="padding: 0.5rem;">Cracks on surface, lower cohesion</td><td style="padding: 0.5rem;">Moderate</td></tr>
-    </tbody>
-  </table>
-</div>
+        </table>
+      </div>
 
-<div style="margin-top: 2rem;">
-  <h4 style="color: #ffb347;">🧪 Experimental Setups & Key Diagrams</h4>
-  <figure style="margin-bottom: 1.5rem;">
-    <img src="assets/images/CF 1.png" alt="Biogas Plant Flow Chart" style="width: 70%; border-radius: 8px;">
-    <figcaption style="margin-top: 0.5rem; font-style: italic; color: #ccc;">Cavendish Farms' biogas treatment pipeline. Potato waste is processed through hydrolysis and anaerobic digestion, converting to usable biogas.</figcaption>
-  </figure>
- <div style="display: flex; justify-content: space-between; gap: 2rem; margin-bottom: 2rem;">
-  <figure style="width: 50%; margin: 0;">
-    <img src="assets/images/CF 2.png" alt="Roller Compaction Pellet Flow" style="width: 100%; border-radius: 8px;">
-    <figcaption style="margin-top: 0.5rem; font-style: italic; color: #ccc;">Compression sequence in die cavity under roller pressure during pellet formation. Shows compaction and ejection phases.</figcaption>
-  </figure>
-  <figure style="width: 50%; margin: 0;">
-    <img src="assets/images/CF 3.png" alt="Machined Pellet Die Plate" style="width: 100%; border-radius: 8px;">
-    <figcaption style="margin-top: 0.5rem; font-style: italic; color: #ccc;">Custom CNC-machined steel die used for pressing digestate samples into fuel-grade pellets.</figcaption>
-  </figure>
-</div>
-<div class="project" id="project-touch">
-      <h3 style="color: #ffb347;">🎛️ TouchDesigner/Hydra Visuals – Takeover DJ Set</h3>
-      <p>Designed and coded real-time visuals for a 4-hour electronic music performance. Used Hydra with TouchDesigner to create audio-reactive shaders, kaleidoscopic transitions, and synced lighting effects. Combined live audio data and visual loops to match BPM and genre shifts across house, dubstep, and disco groove. Delivered a seamless VJ experience tailored to the live DJ environment.</p>
-<section>
-  <h2 style="color: #ffb347;">Hydra Live Coding</h2>
-  <p>You can try editing Hydra live code below. This embedded code editor allows real-time visual manipulation directly in the browser using JavaScript shaders.</p>
-  <iframe
-    src="https://hydra.ojack.xyz/?code=b3NjKDMwJTJDJTIwMC4wMTMlMkMlMjAxKSUwQSUwOS5tdWx0KG9zYygyMCUyQyUyMC0wLjElMkMlMjAxKSUwQSUwOSUwOS5tb2R1bGF0ZShub2lzZSgzJTJDJTIwMSkpJTBBJTA5JTA5LnJvdGF0ZSgwLjcpKSUwQSUwOS5wb3N0ZXJpemUoJTVCMyUyQyUyMDclMkMlMjAyJTVELmZhc3QoMC41KSUwQSUwOSUwOS5zbW9vdGgoMSkpJTBBJTA5Lm1vZHVsYXRlUm90YXRlKG8wJTJDJTIwKCklMjAlM0QlM0UlMjBtb3VzZS54JTIwKiUyMDAuMDAzKSUwQSUwOS5vdXQoKSUzQg%3D%3D"
-    style="width: 100%; height: 500px; border: 2px solid #ffb347; border-radius: 8px; margin-top: 1rem;"
-    allowfullscreen
-  ></iframe>
-</section>   
-</div>
+      <div style="margin-top: 2rem;">
+        <h4>📊 CHNS/O Analysis & Pellet Characteristics</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Carbon (C)</td><td>41.13%</td></tr>
+            <tr><td>Hydrogen (H)</td><td>6.23%</td></tr>
+            <tr><td>Nitrogen (N)</td><td>2.14%</td></tr>
+            <tr><td>Sulfur (S)</td><td>0.44%</td></tr>
+            <tr><td>Oxygen (O)</td><td>50.06%</td></tr>
+            <tr><td>HHV</td><td>18.5 MJ/kg</td></tr>
+            <tr><td>Bulk Density</td><td>600–700 kg/m³</td></tr>
+            <tr><td>Durability</td><td>92%</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="project" id="project-3d">
-      <h3 style="color: #ffb347;">🚀 Interactive 3D Experience</h3>
-      <p>COMING SOON!!!!! Placeholder for a future 3D viewer experience featuring SolidWorks-exported models. Current demo includes an interactive, orbit-controlled 3D placeholder. Final version will showcase converted glTF scenes and spatial project navigation similar to Bruno Simon's portfolio.</p>
+      <div style="margin-top: 2rem;">
+        <h4>💧 Moisture Content vs Pellet Quality</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Moisture Content (%)</th>
+              <th>Visual Description</th>
+              <th>Pellet Quality</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>40%</td><td>Clumpy, steam-released mash</td><td>Unusable</td></tr>
+            <tr><td>35%</td><td>Sticky, poor compression</td><td>Poor</td></tr>
+            <tr><td>30%</td><td>Smooth surface, clean ejection</td><td>Good</td></tr>
+            <tr><td>25%</td><td>Cracks on surface, lower cohesion</td><td>Moderate</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-	<p> In the meantime, enjoy this other project I worked on earlier this year.     Explore my latest 3D interactive project built with Three.js. This immersive experience showcases my skills in 3D modeling and web integration.
-</p>
-	
-  <iframe
-    src="https://loco-coder.github.io/3D-interactive-site/"
-    width="100%"
-    height="600"
-    style="border: none; border-radius: 8px; margin-top: 1rem;"
-    allowfullscreen
-  ></iframe>
-</section>
-
-	    <div id="viewer-container"></div>
-    </div>
- 
-</div>
+      <div style="margin-top: 2rem;">
+        <h4>🧪 Experimental Setups & Key Diagrams</h4>
+        <figure>
+          <img src="assets/images/CF 1.png" alt="Biogas Plant Flow Chart">
+          <figcaption>Cavendish Farms' biogas treatment pipeline. Potato waste is processed through hydrolysis and anaerobic digestion, converting waste to energy.</figcaption>
+        </figure>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;">
+          <figure style="flex: 1 1 45%; margin: 0;">
+            <img src="assets/images/CF 2.png" alt="Roller Compaction Pellet Flow">
+            <figcaption>Compression sequence in die cavity under roller pressure during pellet formation.</figcaption>
+          </figure>
+          <figure style="flex: 1 1 45%; margin: 0;">
+            <img src="assets/images/CF 3.png" alt="Machined Pellet Die Plate">
+            <figcaption>Custom CNC-machined steel die for pressing digestate samples into fuel-grade pellets.</figcaption>
+          </figure>
+        </div>
+      </div>
       <div id="gantt-cavendish" class="gantt-container" style="display:none;"><svg></svg></div>
     </div>
 
-   
+    <div class="project" id="project-touch">
+      <h3>🎛️ TouchDesigner/Hydra Visuals – Takeover DJ Set</h3>
+      <p>Designed and coded real-time visuals for a 4-hour electronic music performance. Used Hydra with TouchDesigner for audio-reactive shaders and synced lighting.</p>
+      <section>
+        <h2>Hydra Live Coding</h2>
+        <p>You can try editing Hydra live code below. This embedded code editor allows real-time visual manipulation directly in the browser using JavaScript shaders.</p>
+        <iframe
+          src="https://hydra.ojack.xyz/?code=b3NjKDMwJTJDJTIwMC4wMTMlMkMlMjAxKSUwQSUwOS5tdWx0KG9zYygyMCUyQyUyMC0wLjElMkMlMjAxKSUwQSUwOSUwOS5tb2R1bGF0ZShub2lzZSgzJTJDJTIwMSkpJTBBJTA5JTA5LnJvdGF0ZSgwLjcp"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </div>
+
+    <div class="project" id="project-3d">
+      <h3>🚀 Interactive 3D Experience</h3>
+      <p>COMING SOON! Placeholder for a future 3D viewer experience featuring SolidWorks-exported models. Meanwhile, explore my latest 3D interactive project built with Three.js below.</p>
+      <iframe
+        src="https://loco-coder.github.io/3D-interactive-site/"
+        height="600"
+        allowfullscreen
+      ></iframe>
+      <div id="viewer-container"></div>
+    </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.1/dist/frappe-gantt.min.js"></script>
@@ -235,32 +326,5 @@
       });
     });
   </script>
-
-  <style>
-    body {
-      background-color: #1e1e1e;
-      color: #f3f3f3;
-      font-family: Arial, sans-serif;
-    }
-    .gantt-toggle {
-      background-color: #ffb347;
-      color: #1e1e1e;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      margin-top: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .gantt-toggle:hover {
-      background-color: #ffaa33;
-    }
-    .gantt-container {
-      width: 100%;
-      overflow: hidden;
-      margin-top: 1rem;
-    }
-  </style>
 </body>
 </html>
