@@ -13,13 +13,41 @@
       <h2 style="color: #ffb347;">About Me</h2>
       <p>Engineer-in-Training based in Ottawa. Specializing in SolidWorks, Blender, and data-driven design with FreeCAD, TouchDesigner, and Python. Focused on sustainability, visual storytelling, and hands-on engineering.</p>
     </section>
- <section>
-      <h2 style="color: #ffb347;">Contact</h2>
-      <p>Email: rodriguezjonathan467@gmail.com</p>
-      <p>Phone: (902) 978-0118</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/jonathan-rodriguez-del-aguila/" style="color:#ffb347;">Jonathan Rodriguez</a></p>
-      <p>GitHub: <a href="https://github.com/loco-coder" style="color:#ffb347;">github.com/loco-coder</a></p>
-    </section>
+
+<section>
+  <h2 style="color: #ffb347;">Professional Experience</h2>
+  <h3 style="color: #f3f3f3;">Mechanical Engineer-in-Training | Ottawa, ON</h3>
+  <p><em>January 2024 – Present</em></p>
+  <ul>
+    <li>Developing mechanical systems and custom tooling for production and R&D environments</li>
+    <li>Creating parametric models and drawings using SolidWorks and FreeCAD</li>
+    <li>Collaborating across teams to optimize manufacturing processes</li>
+    <li>Documenting procedures and supporting design verification efforts</li>
+  </ul>
+</section>
+
+<section>
+  <h2 style="color: #ffb347;">Education</h2>
+  <h3 style="color: #f3f3f3;">Bachelor of Engineering in Sustainable Design Engineering</h3>
+  <p><em>University of Prince Edward Island – Graduated 2023</em></p>
+  <ul>
+    <li>Specialized in sustainability-focused mechanical and systems design</li>
+    <li>Completed senior capstone project converting bio-solids to energy pellets</li>
+    <li>Involved in CAD-heavy project work and environmental engineering courses</li>
+  </ul>
+</section>
+
+<section>
+  <h2 style="color: #ffb347;">Technical Skills</h2>
+  <ul>
+    <li><strong>CAD & Design:</strong> SolidWorks, FreeCAD, AutoCAD, Blender</li>
+    <li><strong>Programming:</strong> Python, MATLAB</li>
+    <li><strong>Visualization:</strong> TouchDesigner, Adobe Suite (basic)</li>
+    <li><strong>Simulation:</strong> ANSYS, COMSOL (introductory)</li>
+    <li><strong>Project Tools:</strong> GitHub, JIRA, Google Workspace</li>
+  </ul>
+</section>
+
     <h2 style="color: #ffb347;">Highlighted Projects</h2>
 
     <div class="project" id="project-abpi">
@@ -117,7 +145,29 @@
     <figcaption style="margin-top: 0.5rem; font-style: italic; color: #ccc;">Custom CNC-machined steel die used for pressing digestate samples into fuel-grade pellets.</figcaption>
   </figure>
 </div>
+<div class="project" id="project-touch">
+      <h3 style="color: #ffb347;">🎛️ TouchDesigner/Hydra Visuals – Takeover DJ Set</h3>
+      <p>Designed and coded real-time visuals for a 4-hour electronic music performance. Used Hydra with TouchDesigner to create audio-reactive shaders, kaleidoscopic transitions, and synced lighting effects. Combined live audio data and visual loops to match BPM and genre shifts across house, dubstep, and disco groove. Delivered a seamless VJ experience tailored to the live DJ environment.</p>
+<section>
+  <h2 style="color: #ffb347;">Hydra Live Coding</h2>
+  <p>You can try editing Hydra live code below. This embedded code editor allows real-time visual manipulation directly in the browser using JavaScript shaders.</p>
+  <iframe
+    src="https://hydra.ojack.xyz/?code=osc(100, 0.01, 1.4)
+	.rotate(0, 0.1)
+	.mult(osc(10, 0.1).modulate(osc(10).rotate(0, -0.1), 1))
+	.color(2.83,0.91,0.39)
+  .out(o0)"
+    style="width: 100%; height: 500px; border: 2px solid #ffb347; border-radius: 8px; margin-top: 1rem;"
+    allowfullscreen
+  ></iframe>
+</section>   
+</div>
 
+    <div class="project" id="project-3d">
+      <h3 style="color: #ffb347;">🚀 Interactive 3D Experience</h3>
+      <p>Placeholder for a future 3D viewer experience featuring SolidWorks-exported models. Current demo includes an interactive, orbit-controlled 3D placeholder. Final version will showcase converted glTF scenes and spatial project navigation similar to Bruno Simon's portfolio.</p>
+      <div id="viewer-container"></div>
+    </div>
  
 </div>
       <div id="gantt-cavendish" class="gantt-container" style="display:none;"><svg></svg></div>
