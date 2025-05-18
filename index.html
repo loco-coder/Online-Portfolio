@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jonathan Rodriguez | Portfolio</title>
@@ -78,9 +79,44 @@
 
 <div style="margin-top: 1.5rem;">
         <h4 style="color: #ffb347;">📷 Visuals & Results</h4>
-        <img src="assets/images/cavendish-drying-curve.png" alt="Drying Curve" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-        <img src="assets/images/cavendish-pellet-press.png" alt="Pellet Press Prototype" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-        <table style="width: 100%; background-color: #2a2a2a; color: #fff; border-collapse: collapse; border-radius: 6px; overflow: hidden;">
+         <section>
+      <h2>Drying Curve Analysis</h2>
+      <p>Interactive drying curves for potato digestate under different drying conditions. Hover and zoom to explore the data.</p>
+      <div id="drying-chart" style="grid-column: span 12; height: 500px;"></div>
+      <script>
+        const trial70 = {
+          x: [0, 5, 15, 25, 35, 45, 55, 65],
+          y: [95.8, 75, 60, 50, 45, 40, 38, 35],
+          mode: 'markers', name: '70 °C, Loaf pan', marker: { color: 'royalblue' }
+        };
+        const trial90 = {
+          x: [0, 5, 15, 25, 35, 45, 55, 65],
+          y: [89.6, 65, 40, 30, 25, 23, 22, 21],
+          mode: 'markers', name: '90 °C, Spread pan', marker: { color: 'tomato' }
+        };
+        const fitX = Array.from({ length: 71 }, (_, i) => i);
+        const fit70 = {
+          x: fitX,
+          y: fitX.map(t => 95.828 * Math.exp(-0.026 * t)),
+          mode: 'lines', name: 'Fit @70 °C', line: { dash: 'dot', color: 'royalblue' }
+        };
+        const fit90 = {
+          x: fitX,
+          y: fitX.map(t => 89.614 * Math.exp(-0.067 * t)),
+          mode: 'lines', name: 'Fit @90 °C', line: { dash: 'dot', color: 'tomato' }
+        };
+        const target20 = { x: [0, 70], y: [20, 20], mode: 'lines', name: '20% target', line: { color: 'gold', width: 2 } };
+        const target15 = { x: [0, 70], y: [15, 15], mode: 'lines', name: '15% target', line: { color: 'lightgray', width: 2 } };
+        const layout = {
+          paper_bgcolor: '#ffffff', plot_bgcolor: '#f9f9f9', font: { color: '#111' },
+          xaxis: { title: 'Time (hours)', gridcolor: '#ddd' }, yaxis: { title: 'Moisture Content (%)', range: [0, 100], gridcolor: '#ddd' },
+          legend: { orientation: 'h', x: 0.1, y: 1.1 }, margin: { t: 30, b: 40, l: 50, r: 20 }
+        };
+        Plotly.newPlot('drying-chart', [trial70, trial90, fit70, fit90, target20, target15], layout);
+      </script>
+    </section>
+
+	<table style="width: 100%; background-color: #2a2a2a; color: #fff; border-collapse: collapse; border-radius: 6px; overflow: hidden;">
           <thead style="background-color: #ffb347; color: #1e1e1e;">
             <tr>
               <th style="padding: 0.5rem; text-align: left;">Test</th>
